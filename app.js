@@ -6,7 +6,7 @@ const topics = [
     series: [
       { title: "Misterios históricos", videos: [
         { title: "La epidemia del baile", description: "Una mirada a los relatos del episodio y a las explicaciones que se han propuesto.", url: "https://www.youtube.com/watch?v=WsAhdz0gyCs" },
-        { title: "Las brujas de Salem", description: "El contexto de las acusaciones y los juicios que marcaron a la comunidad." },
+        { title: "Las brujas de Salem", description: "El contexto de las acusaciones y los juicios que marcaron a la comunidad.", url: "https://www.youtube.com/watch?v=6IDhEP0MtnY" },
       ] },
       { title: "Casos y leyendas", videos: [
         { title: "El Triángulo de las Bermudas", description: "Los relatos de desapariciones que dieron origen a la fama de esta región del Atlántico.", url: "https://www.youtube.com/watch?v=9Jvs-syqxx8" },
