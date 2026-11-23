@@ -19,9 +19,14 @@ const topics = [
     alt: "Mapa animado en 3D de una isla con montañas, un marcador y un globo aerostático.",
     description: "Descubre curiosidades de la geografía mundial con mapas animados. ¿Cuántas conocías?",
     series: [{ title: "Curiosidades geográficas", videos: [
-      {
+     {
   title: "Punto Nemo: el lugar más aislado del planeta",
   description: "Descubre dónde está el punto del océano más alejado de tierra firme.",
+  url: "https://www.youtube.com/shorts/-ifQ-dnv2OQ",
+},
+{
+  title: "El único país que está por encima de los 1.000 metros",
+  description: "Descubre qué país se encuentra enteramente por encima de los 1.000 metros de altitud.",
   url: "https://www.youtube.com/shorts/E6tgyVxYH8I",
 },
       { title: "Fronteras que sorprenden", description: "Recorremos enclaves y límites poco comunes con ayuda de mapas animados." },
