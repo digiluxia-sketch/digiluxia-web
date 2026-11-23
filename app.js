@@ -19,6 +19,11 @@ const topics = [
     alt: "Mapa animado en 3D de una isla con montañas, un marcador y un globo aerostático.",
     description: "Descubre curiosidades de la geografía mundial con mapas animados. ¿Cuántas conocías?",
     series: [{ title: "Curiosidades geográficas", videos: [
+      {
+  title: "Punto Nemo: el lugar más aislado del planeta",
+  description: "Descubre dónde está el punto del océano más alejado de tierra firme.",
+  url: "https://www.youtube.com/shorts/E6tgyVxYH8I",
+},
       { title: "Fronteras que sorprenden", description: "Recorremos enclaves y límites poco comunes con ayuda de mapas animados." },
       { title: "Cómo el relieve cambia un mapa", description: "Montañas, ríos y costas ayudan a explicar dónde se conectan o se separan los territorios." },
     ] }],
