@@ -55,6 +55,8 @@ const english = new Map([
   ["Una cronología del caso y de las versiones que circularon después del hallazgo.","A timeline of the incident and the accounts that circulated after the discovery."],
   ["Mapa animado en 3D de una isla con montañas, un marcador y un globo aerostático.","3D map of an island with mountains, a location pin, and a hot-air balloon."],
   ["Curiosidades geográficas","Geography facts"],
+  ["Punto Nemo: el lugar más aislado del planeta", "Point Nemo: the most isolated place on Earth"],
+["Descubre dónde está el punto del océano más alejado de tierra firme.", "Discover where to find the point in the ocean farthest from land."],
   ["Fronteras que sorprenden","Surprising borders"],
   ["Recorremos enclaves y límites poco comunes con ayuda de mapas animados.","Explore enclaves and unusual borders through animated maps."],
   ["Cómo el relieve cambia un mapa","How terrain shapes a map"],
