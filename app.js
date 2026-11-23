@@ -5,7 +5,7 @@ const topics = [
     description: "Episodios históricos y casos enigmáticos contados a partir de lo que se sabe, lo que se relata y lo que sigue abierto.",
     series: [
       { title: "Misterios históricos", videos: [
-        { title: "La epidemia del baile", description: "Una mirada a los relatos del episodio y a las explicaciones que se han propuesto." },
+        { title: "La epidemia del baile", description: "Una mirada a los relatos del episodio y a las explicaciones que se han propuesto.", url: "https://www.youtube.com/watch?v=WsAhdz0gyCs" },
         { title: "Las brujas de Salem", description: "El contexto de las acusaciones y los juicios que marcaron a la comunidad." },
       ] },
       { title: "Casos y leyendas", videos: [
