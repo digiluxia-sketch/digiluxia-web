@@ -9,7 +9,7 @@ const topics = [
         { title: "Las brujas de Salem", description: "El contexto de las acusaciones y los juicios que marcaron a la comunidad." },
       ] },
       { title: "Casos y leyendas", videos: [
-        { title: "El Triángulo de las Bermudas", description: "Los relatos de desapariciones que dieron origen a la fama de esta región del Atlántico." },
+        { title: "El Triángulo de las Bermudas", description: "Los relatos de desapariciones que dieron origen a la fama de esta región del Atlántico.", url: "https://www.youtube.com/watch?v=9Jvs-syqxx8" },
         { title: "El caso Roswell de 1947", description: "Una cronología del caso y de las versiones que circularon después del hallazgo." },
       ] },
     ],
