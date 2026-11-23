@@ -61,10 +61,14 @@ dialog h2 { margin-top:0 }
 .series { margin:2.5rem 0 }
 .series h2 { font-size:clamp(1.65rem,3vw,2.6rem); margin-bottom:1.15rem }
 .episode-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1rem }
-.episode { background:#0e0f11; border:1px solid var(--line); border-radius:12px; padding:1.25rem }
+.episode { display:grid; grid-template-columns:minmax(0, .47fr) minmax(0, 1fr); gap:1rem; background:#0e0f11; border:1px solid var(--line); border-radius:12px; padding:1.25rem }
+.episode-thumbnail { position:relative; min-height:110px; overflow:hidden; border-radius:7px; background:#16171b }
+.episode-thumbnail img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover }
+.episode-copy { display:flex; flex-direction:column; align-items:flex-start }
 .episode h3 { margin:0; font-size:1.25rem }
 .episode p { margin:.45rem 0 0 }
-.episode a { margin-top:.9rem }
+.episode a { margin-top:auto }
+.episode-copy:has(a) p { margin-bottom:.9rem }
 .related { position:static; display:flex; flex-direction:row; flex-wrap:wrap; gap:.6rem; padding:0; background:transparent }
 @media(max-width:650px) {
   header { justify-content:space-between }
@@ -88,8 +92,11 @@ dialog h2 { margin-top:0 }
   .channel .actions { flex-direction:row; align-items:center }
   .library-hero>div { padding:0 1.2rem 1.3rem }
 }
-@media(max-width:500px) {
+@media(max-width:650px) {
   .episode-grid { grid-template-columns:1fr }
+}
+@media(max-width:500px) {
+  .episode { gap:.75rem; padding:1rem }
   .home .hero { min-height:610px }
   .hero h1 { font-size:clamp(3.1rem,14.5vw,4.5rem) }
   .section { padding-inline:5vw }

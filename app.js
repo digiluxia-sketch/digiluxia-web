@@ -80,6 +80,40 @@ const isHome = document.body.classList.contains("home");
 const home = isHome ? "" : "index.html" + (isEnglish ? "?lang=en" : "");
 const homeLink = (id) => home + "#" + id;
 const libraryLink = (id) => "videos.html?tema=" + id + (isEnglish ? "&lang=en" : "");
+
+function youtubeThumbnail(videoUrl) {
+  if (!videoUrl) return "";
+  let url;
+  try {
+    url = new URL(videoUrl);
+  } catch {
+    return "";
+  }
+  if (!["https:", "http:"].includes(url.protocol)) return "";
+
+  const parts = url.pathname.split("/").filter(Boolean);
+  let id;
+  if (url.hostname === "youtu.be") {
+    id = parts[0];
+  } else if (["youtube.com", "www.youtube.com", "m.youtube.com"].includes(url.hostname)) {
+    if (parts[0] === "watch") id = url.searchParams.get("v");
+    else if (["shorts", "embed", "live"].includes(parts[0])) id = parts[1];
+  }
+  return id && /^[A-Za-z0-9_-]{11}$/.test(id) ? "https://i.ytimg.com/vi/" + id + "/mqdefault.jpg" : "";
+}
+
+function episodeCard(video, image) {
+  const fallback = "assets/" + image;
+  const thumbnail = youtubeThumbnail(video.url);
+  return `<article class="episode">
+    <div class="episode-thumbnail"><img src="${thumbnail || fallback}" alt="" loading="lazy"${thumbnail ? ` data-fallback="${fallback}"` : ""}></div>
+    <div class="episode-copy">
+      <h3>${video.title}</h3><p>${video.description}</p>
+      ${video.url ? `<a class="secondary" href="${video.url}">Ver video</a>` : ""}
+    </div>
+  </article>`;
+}
+
 const navigation = [
   { id: "canales", title: "Nuestros canales" },
   { id: "nosotros", title: "Nosotros" },
@@ -214,11 +248,12 @@ if (isHome) {
       ${topic.series.map((series) => `
         <section class="series">
           <h2>${series.title}</h2>
-          <div class="episode-grid">${series.videos.map((video) => `
-            <article class="episode"><h3>${video.title}</h3><p>${video.description}</p>
-            ${video.url ? `<a class="secondary" href="${video.url}">Ver video</a>` : ""}</article>`).join("")}</div>
+          <div class="episode-grid">${series.videos.map((video) => episodeCard(video, topic.image)).join("")}</div>
         </section>`).join("")}
       <nav class="related" aria-label="Otras bibliotecas">${topics.filter((entry) => entry !== topic).map((entry) => `<a class="secondary" href="${libraryLink(entry.id)}">${entry.title}</a>`).join("")}</nav>`;
+    for (const img of library.querySelectorAll(".episode-thumbnail img[data-fallback]")) {
+      img.addEventListener("error", () => { img.src = img.dataset.fallback; }, { once: true });
+    }
   } else {
     library.innerHTML = `<h1>Bibliotecas de DIGILUXIA</h1><div class="related">${topics.map((entry) => `<a class="secondary" href="${libraryLink(entry.id)}">${entry.title}</a>`).join("")}</div>`;
   }
