@@ -56,6 +56,8 @@ const english = new Map([
   ["Mapa animado en 3D de una isla con montañas, un marcador y un globo aerostático.","3D map of an island with mountains, a location pin, and a hot-air balloon."],
   ["Curiosidades geográficas","Geography facts"],
   ["Punto Nemo: el lugar más aislado del planeta", "Point Nemo: the most isolated place on Earth"],
+  ["El único país que está por encima de los 1.000 metros", "The only country entirely above 1,000 meters"],
+["Descubre qué país se encuentra enteramente por encima de los 1.000 metros de altitud.", "Find out which country lies entirely more than 1,000 meters above sea level."],
 ["Descubre dónde está el punto del océano más alejado de tierra firme.", "Discover where to find the point in the ocean farthest from land."],
   ["Fronteras que sorprenden","Surprising borders"],
   ["Recorremos enclaves y límites poco comunes con ayuda de mapas animados.","Explore enclaves and unusual borders through animated maps."],
